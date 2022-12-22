@@ -19,7 +19,6 @@ class Presentes extends Controller
         $convidado->telephone = $request->post('telephone');
         $convidado->con_pre_id = $request->post('gift');
         $convidado->save();
-
         $presente = Presente::find($request->post('gift'));
         $presente->valid = 1;
         $presente->save();
